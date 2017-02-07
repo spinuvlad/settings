@@ -1,0 +1,116 @@
+$font: Helvetica, sans-serif
+#size: 10px
+
+----------- variabila in nuemele selectorului---------
+$sel: test
+.#{$sel}												| .test{ width:10px; }
+	width: 10px
+----------------------------
+$attr: border
+p																| p { border-color: blue; }
+	#{$attr}-color: blue
+--------------------- @extend-----------------------
+.message
+	border: 1px solid
+	padding: 10px
+
+.succes                        	| continutul din ".message" afisat in ".succes"
+	@extend .message							| @extend primeste ORICE selector (#,tag,nth etc)
+	border-color: green
+
+.error
+	@extend .message
+	border-color: red
+----------------------- @mixin = + --------------------
+=border-radius($radius)							//atentie la semnul "=" indica ca se declara o functie cu numele "border-radius"
+	-webkit-border-radius:  $radius   // in loc de "=" poate fi pus @mixin
+	-moz-border-radius:     $radius
+	-ms-border-radius:      $radius
+	border-radius:          $radius
+
+.box
+	+border-radius(10px)							// atentie la semnul "+" se chiama functia cu numele "border-radius"
+					css												// in loc de "+" poate fi @include
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+--------------
+=box-shadow($shadow...)
+	-moz-box-shadow: 		$shadow
+	-webkit-box-shadow: $shadow
+	box-shadow: 				$shadow
+
+div.container
+	+box-shadow(0px 4px 5px #555, 2px 6px 10px #999)
+
+------------------- variabile locale si globale -----------
+$width: 10em
+#main
+	$width: 5em		//!global							| #main {width: 5em;} . !global - va schimba variabila peste tot
+	width: $width
+
+#sidebar
+	width: $width												| #sidebar {width: 10em;}
+
+-------------------- IF --------------------
+$type: monster												| p{ color: green; }
+p
+	@if $type == ocean
+		color: blue
+	@else if $type == matador
+		color: red
+	@else if $type == monster
+		color: green
+	@else
+		color: black
+------------------- ciclul FOR --------------------
+@for $i from 1 through 3   		 //$i - count; from - inceputul ciclului; through - pana la (inclusiv)
+	.item-#{$i}
+		width: 2px * $i
+
+				css
+.item-1 {
+  width: 2px; }
+
+.item-2 {
+  width: 4px; }
+
+.item-3 {
+  width: 6px; }
+
+ ----------------- ciclul WHILE ---------------------
+$i: 6
+@while $i > 0
+	.item-#{$i}
+		width: 2px * $i
+	$i: $i - 2
+
+					css:
+.item-6 {
+  width: 12px; }
+
+.item-4 {
+  width: 8px; }
+
+.item-2 {
+  width: 4px; }
+
+------------------ ciclul @each masive -----------------
+$map: (key1: value1, key2: value2, key3: value3)
+
+@each $orice in $map
+	.#{$orice}-icon
+		background-image: url("/images/#{$orice}.png")
+
+			css
+.key1 value1-icon {
+  background-image: url("/images/key1 value1.png"); }
+
+.key2 value2-icon {
+  background-image: url("/images/key2 value2.png"); }
+
+.key3 value3-icon {
+  background-image: url("/images/key3 value3.png"); }

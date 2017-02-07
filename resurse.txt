@@ -1,0 +1,48 @@
+fonts:
+fonts4web.ru  --> alege font  --> download -->copie dosarul din arhiv in dosarul "fonts"
+de pe site copie blocul de cod pt font --> paste in fonts.css
+
+simboluri HTML:
+http://www.sabinanore.com/design/html-special-symbols/
+
+images:
+random images: http://lorempixel.com/
+
+carousel:
+http://owlgraphic.com/owlcarousel/
+
+ICON (html/css):
+http://ionicons.com/cheatsheet.html
+png/svg:
+https://icons8.com/web-app/category/all
+create button:
+http://buttonoptimizer.com/
+social media buttons:
+https://dcrazed.com/html-css3-social-media-buttons/
+
+font/icon (download custom package):
+http://fontello.com/
+
+html/css/js run:
+http://jsbin.com/
+
+tening:
+http://cssdeck.com/
+
+info:
+http://css-live.ru/
+http://www.itmathrepetitor.ru/zadachi-po-html-i-css/
+
+testare sait automat in diferite browsere:
+http://browsershots.org/
+
+testare adaptivitate:
+https://developers.google.com/speed/pagespeed/insights/
+
+less online compiller
+http://less2css.org/
+download less compiller
+http://koala-app.com/
+info less:
+https://mrmlnc.gitbooks.io/less-guidebook-for-beginners/content/chapter_4/homework.html
+http://theory.phphtml.net/books/css/osnovy-raboty-s-yazykom-less-dlya-novichkov.html

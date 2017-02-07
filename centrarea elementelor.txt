@@ -1,0 +1,173 @@
+proprietati de aranjare/centrare pe verticala/orizontala:
+******************* ORIZONTALA **********************
+ex.:1
+<div class="test">
+	Text
+</div>
+-----------------
+.test{
+	margin: 0 auto;		top/bottom: 0; left/right: auto	 /*centreaza blocul "div"*/
+	text-align: center;	 /*centreaza textul din "div"
+}
+ex.:2
+<div class="test">
+	<div>
+		Text
+	</div>
+</div>
+-----------------
+.test{
+	position: relative;
+}
+.test > div{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+***************** VERTICALA ***********************
+<div class="test">
+	<div>
+		Text
+	</div>
+</div>
+-------------------
+ex.:1
+.test{
+	background-color: black;
+	color: #fff;
+}
+.test > div{
+	height: 100px;
+	line-height: 100px;
+	white-space: nowrap; /*pt ca continutul din bloc sa nu treaca din rand nou - se foloseste doar cand situatia o cere */
+}
+---------------------
+ex.:2
+.test{
+	display: table;
+	height: 250px;
+}
+.test > div{
+	display: table-cel;
+	vertical-align: middle;
+}
+---------------------
+ex.:3
+.test{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+---------------------
+ex.:4
+.test{
+	position: relative;
+}
+.test > div{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+----------------------
+ex.:5
+.test{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+----------------------
+ORIZONTALA/VERTICALA COMBINAT:
+ex.:1
+.test{
+	position: relative;
+}
+.test > div{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
+-----------------------
+ex.:2
+.test{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+------------------------ centrare absoluta a elementului "li" prin display: flex
+ul{
+	display: flex;
+	width: 100px;
+	height: 100px;
+}
+
+li{
+	margin: auto;
+}
+-----------
+ul{
+	display: flex;
+	width: 100px;
+	height: 100px;
+	justifi-content: center;
+}
+li{
+	align-self: center;
+}
+---------------------------------------------------- centare "li" pe orizontala fara flex
+ul{
+	widht: 100px;
+	height: 100px;
+	text-align: center;
+}
+li{
+	display: inline-block;
+}
+---------------------------------------------------- centare absoluta "li" fara flex
+ul{
+	widht: 100px;
+	height: 100px;
+	display: table-cell;
+	vertical-align: center;
+	text-align: center;
+}
+li{
+	display: inline-block;
+}
+
+
+
+
+
+display: table-cell
+vertical-align: top
+
+width: 70px
+height: 70px
+line-height: 70px  
+text-align: center  
+display: inline-block
+
+
+line-height: 1.5 - spatiu intre randuri
+
+ANULARE BORDER FOR INPUT:
+input:focus 
+	outline-style:none !important
+
+https://github.com/nodesource/distributions
+
+menu:
+nav
+	>ul
+		padding: 0
+		>li
+			list-style-type: none
+.menu-down
+	padding: 0
+	>li
+		list-style-type: none
+
+		

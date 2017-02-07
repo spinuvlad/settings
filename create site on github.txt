@@ -1,0 +1,12 @@
+create site on github:
+
+1. create new repository
+2. open project folder
+3. open terminal in this project folder
+	git init
+	git remote add origin https://github.com/spinuvlad/mobile-app.github.io.git
+	git checkout -b gh-pages
+	git add .
+	git commit -m "comment"
+	git push origin gh-pages
+4. in setari pe gitgub.com trebuie dat permisiunea la deschiderea de siat

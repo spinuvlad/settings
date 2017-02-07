@@ -1,0 +1,262 @@
+$font-stack:    Helvetica, sans-serif
+$primary-color: #333
+
+body
+[tab]font: 100% $font-stack
+[tab]color: $primary-color
+
+--------------------------------------------sass:
+#main
+  width: 97%
+
+  p, div
+    font-size: 2em
+    a
+      font-weight: bold
+
+  .redbox
+    font-size: 3em
+------------------------css:
+#main {witdh: 97%;}
+#main p, #main div {font-size: 2em;}
+#main p a, #main div a {font-weignt: bold;}
+#main .redbox {font-size: 3em;}
+-----------------------------
+----------------------------------------------sass:
+a
+  font-weight: bold
+  text-decoration: none
+
+  &:hover
+    text-decoration: underline
+
+  body.firefox &
+    font-weight: normal
+***
+#main
+  color: black
+  
+  a
+    font-weight: bold
+
+    &:hover
+      color: red
+***
+#main
+  color: black
+
+  &-sidebar
+    border: 1px solid
+-------------------------css:
+a {font-weight: bold; text-decoration: none;}
+a:hover {text-decoration: underline;}
+body.firefox a {font-weight: normal;}
+***
+#main {color: black;}
+#main a {font-weight: bold;}
+#main a:hover {color: red;}
+***
+#main {color: black;}
+#main-sidebar {border: 1x solid;}
+
+
+-------------------------------------------------sass:
+.selector
+  margin:
+    top: 10px
+    bottom: 15px
+    left: 20px
+    right: 30px
+-------------------css:
+.selector{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  margin-right: 30px;
+}
+
+
+SELECTORI SABLON:
+---------------------------------------------------sass:
+%item-base //INSTRUCTIE
+  display: inline-block
+  transition: all .5s ease
+  max-width: 320px
+
+.item-type-one
+  @extend %item-base
+  margin-top: 20px
+
+.item-type-two
+  @extend %item-base
+  margin-top: 10px
+---------------------------css:
+.item-type-one, .item-type-two{
+  display: inline-block;
+  transition: all .5 ease;
+  max-width: 320px;
+}
+.item-type-one {margin-top: 20px;}
+.item-type-two {margin-top: 10px;}
+
+
+OPERATII:
+---------------------------------------------------sass:
+$summ: 10 + 20 / 2
+$cn: content
+
+.selector
+	margin:
+		top: $summ + px
+		bottom: 12px + 8px
+	background-color: trans + parent
+	#{$cn}: "con" + "tent"
+
+$in: parac
+
+.paracetamol
+	content: "#{$in}etamol"
+--------------------------css:
+.selector {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: transparent;
+	content: "content";
+}
+.paracetamol{
+	content: "paracetamol";
+}
+
+
+OPERATII CU CULORI:
+----------------------------------------------------sass:
+$color1: #440203 + #550506
+$color2: #010203 * 2
+$color3: rgba(180, 0, 0, 0.75) + rgba(20, 255, 0, 0.75)
+
+body
+	background-color: $color1
+	color: $color2
+	border-color: $color3
+
+$translucent-red: rgba(255, 0, 0, 0.5)
+
+p
+	color: opacify($translucent-red, 0.3)
+	background-color: trasnparentize($trasnlucent-red, 0.25)
+
+.selector
+	background-color: rgba(#333, 0.75)
+----------------------------css:
+body{
+	background-color: #990709;
+	color: #020406;
+	border-color: rgba(200, 255, 0, 0.75);
+}
+p{
+	color: rgba(255, 0, 0, 0.8);
+	background-color: rgba(255, 0, 0, 0.25);
+}
+.selector{background-color: rgba(51, 51, 51, 0.75);}
+
+IMPORT:
+----------------------------------------------------sass:
+@import "foo.css";
+@import "foo" screen;
+@import "http://foo.com/bar";
+@import url(foo);
+
+@import "media.sass";
+@import "media.scss";
+@import "media"; // _media.sass sau _media.scss
+---------------------------css:
+@import url(foo.css);
+@import "foo" screen;
+@import "http://foo.com/bar";
+@import url(foo);
+
+pt import de fisiere (ex: scss - cu o sintaxa diferita de sass):
+fisierul cu numele: carusel.scss, se importa in sass:
+1. schimba denumirea in "_carusel.scss"
+2. in fisierul sass: @import "carusel"
+
+DIRECTIVA @at-root (ridica continutul in root):
+-------------------------------------------------sass:
+.selector
+	margin-top: 10px
+
+	@at-root
+		.item
+			background-color: #ccc
+
+	.item
+		background-color: #fff
+----------------------------css:
+.selector {margin-top: 10px;}
+.item {background-color: #ccc;}
+.selector .item {background-color: #fff;}
+
+@for
+--------------------------------------------------sass:
+@for $i from 1 to 11 //"througt" in loc de "to" pt inclusiv "11"
+	.item-#{$i}
+	background-image: url(img/#{$i}.jpg)
+------------------------------css:
+.item-1 {background-image: url(img/1.jpg)}
+.item-2 {background-image: url(img/2.jpg)}
+  ...
+.item-10 {background-image: url(img/10.jpg)}
+
+
+@each
+-------------------------------------------------sass:
+@each $name in carousel, block, vertical, reviews, footer
+	.section -#{$name}
+		background-image: url(img/#{$name}.jpg)
+-----------------------------css:
+.section-carousel {background-image: url(img/carousel.jpg)}
+.section-block {background-image: url(img/block.jpg)}
+.section-vertical {background-image: url(img/vertical.jpg)}
+.section-reviews {background-image: url(img/reviews.jpg)}
+.section-footer {background-image: url(img/footer.jpg)}
+
+
+@while (se indeplineste instructia atat cat rezultatul este "true")
+-----------------------------------------------sass:
+$i: 7
+@while $i > 0
+	.item-#{$i}
+		width: 1em * $i
+	$i: $i - 3
+----------------------------css:
+.item-7{width: 7em;}
+.item-4{width: 4em;}
+.item-1{width: 1em;}
+
+@mixin
+----------------------------------------------sass:
+@mixin culoare_border($color)  //instructie
+	border: $color 1px solid
+
+p
+	@include culoare__border(#333)   //ceea ce se executa in css
+
+@mixin tranzitie_timp($time)  //instructie
+	-webkit-transition: all $time ease;
+	-moz-transition:    all $time ease;
+	-o-transition:      all $time ease;
+	transition:         all $time ease;
+
+h1
+	@include tranzitie__timp(.25s)  //ceea ce se executa
+----------------------------css:
+p {border: #333 1px solid;}
+h1 {
+	-webkit-transition: all 0.25s ease;
+	-moz-transition:    all 0.25s ease;
+	-o-transition:      all 0.25s ease;
+	transition:         all 0.25s ease;
+}
+
+
+

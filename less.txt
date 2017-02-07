@@ -1,0 +1,233 @@
+					LESS									|		CSS
+
+@var: 10px;
+p{
+	font-size: @var;
+}
+-------------------- operatii matematice:
+p{
+	width: @var * 2.5; 						| width: 25px;
+}
+-----------------------------
+@sel: .test;       							|
+@{sel}{            							| .test
+  font-size: 20px; 							|
+}
+div @{sel}											| div .test
+-----------------------------
+.mix{
+  widht: 100px;
+  height: 50px;
+}
+p{
+  .mix;													| width: 100px;
+  color:red;										| height: 50px;
+}																| color: red;
+
+------------------ FUNCTII ------------------
+.radius(@radius){
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	border-radius: @radius;
+}
+p{
+	.radius(10px);								| va pune in p tot ce e mai sus cu "10px"
+}
+------------------------------
+.shadow(@x, @y, @r, @w, @c){    | .shadow(@x, @y, @r, @w: 10px, @c: blue)
+	-webkit-shadow: @arguments;   | in loc de @arguments: @x, @y, @r, @w, @c
+	-moz-shadow: @arguments;
+	box-shadow: @arguments;
+}
+p{
+	.shadow(1px, 1px, 3px, 5px, black)
+}
+------------------ GRUPAREA CODULUI ------------------
+#header{
+	.menu{                      
+	color: red;                   | #header .menu {color: red;}
+	}
+	.logo{
+	width: 100px;                 | #header .menu {width: 100px;}
+	}
+}
+------------------
+a{
+	color: blue;                  | a{color: blue;}
+	&:hover{                      | a:hover{color: red;}
+	color: red;                 
+	}
+}
+----------------- grupare prin ","
+.shadow (@s){
+	box-shadow+: @s;              | //atentie la "+"
+}
+p{
+	.shadow(1px 1px 3px 5px red); | p{box-shadow: 1px 1px 3px 5px red;}
+}
+p{
+	.shadow(1px 1px 3px 5px red); | p{box-shadow: 1px 1px 3px 5px red, 2px 3px blue;} // din cauza la "+"
+	.shadow(2px 3px blue);
+}
+----------------- grupare prin "space"
+.rotate(@r){
+	transform+_: rotate(@r);			| //atentie la "+_"
+}
+.skew(@s){
+	transform+_: skew(@s);
+}
+p{															| p{transform: rotate(10deg) skew(10deg);}
+	.rotate(10deg);
+	.skew(10deg);
+}
+---------------- gruparea proprietatilor comune
+a{color: red;}
+b{width: 100px; &:extend(a);}
+css:
+a, b {color: red;}
+b {width: 100px;}
+
+------------------ variabila cu continut de cod:
+@test: {&:hover{width: 100px;}};
+.test{
+	@test();          						| .test:hover{width: 100px;}
+}
+-----------------------------
+.placeholder(@code){
+	&::placeholder{@code();}
+}
+input{													| input::placeholder{color: white; background-color: red;}
+	.placeholder({
+		color: white;
+		background-color: red;
+	});
+}
+----------------------- @keyframes---------------------
+.keyframes(@name, @code){
+	@keyframes @name {@code();}
+}
+.keyframes(anim, {							| @keyframes anim{
+	from{													| 	from {widht: 100px;}
+		width: 100px;								|		to {widht: 200px;}}
+	}
+	to{
+		width: 200px;
+	}
+});
+--------------------- calc -----------------------
+.calc(@name, @calc){
+	@{name}: calc(@calc);
+}
+p{
+	.calc(width, ~'10px + 30%');  | p{width: calc(10px + 30%);}
+}
+---------------------- conditii --------------------
+@media: mobile;                 | se schimba mobile cu desktop
+
+.mixin (@w) when (@media = mobile) {width: @w;}
+.mixin (@w) when (@media = desktop) {height: @w;}
+p{
+	.mixin(100px);                 | p{width: 100px;} (mobile) si p{height: 100px;} (desktop)
+}
+----------------------
+.mixin (@w) when (@w < 100px) {width: @w; height: 100px;}
+.mixin (@w) when (@w > 100px) {width: @w; height: 200px;}
+p{
+	.mixin(50px);									| p{width: 50px; height: 100px;}
+}
+------------------- functii conditii -----------------
+.mixin (@w) when (ispixel(@w)) {width: @w; height: 100px;}
+.mixin (@w) when (ispercentage(@w)) {width: @w; height: 200px;}
+p{.mixin(20px);}								| p{width: 20px; height: 100px;}
+p{.mixin(20%);}									| p{width: 20%; height: 200px;}
+
+------------------- functia daca (& when) -------------------- !!!
+@my-option : true;              | // schimband true cu false punem portiunea de cod dorita in css
+																	// in loc de true sau false poate fi scris orice nume
+	& when (@my-option = true){
+	button { color: white; }
+	a { color: blue; }
+	}
+
+	& when (@my-option = false){
+		button {color: blue; widht: 100px;}
+		a{color: red;}
+	}
+--------------------------- ciclu -----------------------
+.my-name(@my-counter) when (@my-counter > 0){
+	.my-name(@my-counter - 1);
+	widht: (10px * @my-counter);       
+}
+div{													| div{width: 10px; width: 20px; width: 30px; width: 40px; width: 50px;}
+	.my-name(5);
+}
+---------------- generator ciclu
+.generate-columns(@n, @i: 1) when (@i =< @n){
+	.column-@{i}{
+		width: (@i * 100% / @n);
+	}
+	.generate-columns(@n, (@i + 1));
+}
+.generate-columns(4);
+									css:
+.column-1 {
+  width: 25%;
+}
+.column-2 {
+  width: 50%;
+}
+.column-3 {
+  width: 75%;
+}
+.column-4 {
+  width: 100%;
+}
+------------------ BIBLIOTECI PERSONALIZATE -------------------
+#buttons{
+	.button {
+		display: block;
+		border: 1px solid black;
+	}
+	.input{
+		width: 100px;
+	}
+}
+#header a{
+	color: orange;
+	#buttons > .button;
+}
+										css:
+#buttons .button {
+  display: block;
+  border: 1px solid black;
+}
+#buttons .input {
+  width: 100px;
+}
+#header a {
+  color: orange;
+  display: block;
+  border: 1px solid black;
+}
+
+--------------------- variabila in variabila -----------------
+@fnord: "I am fnord.";
+@var: 	"fnord";  // pastrez in @var, variabila @fnord care contine "I am fnord."
+
+p{
+	content: @@var;					| p{content: "I am fnord."}
+}
+
+--------------------- @import ------------------------
+@import (reference) "/map/map1/map2.main.less";
+
+compilatore:
+less online compiller
+http://less2css.org/
+
+download less compiller
+http://koala-app.com/
+
+crunchapp.net
+
+prepros.io

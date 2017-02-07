@@ -1,0 +1,37 @@
+INSTALL GIT:
+1.download git from: https://git-for-windows.github.io/
+
+GIT CONFIG:
+1.git config --global user.name "Name Family"
+  git config --global user.email "my_email@domain.com"
+2.verify:
+  git config --list
+----------------------------
+nodejs.org - install
+open - >node.js command prompt ->
+		npm ls -g   						-> verifica pachetele 
+npm i gulp-cli -g
+		npm ls -g --depth=0  		-> verifica pachetele instalate personal
+		open folder project:
+npm i gulp --save-dev
+npm i gulp-sass --save-dev
+		npm ls --depth=0
+npm init
+pt instalarea pachetelor: npm i
+
+gulp watch
+
+
+TASTE:
+cd.. - un pas in urma
+cd "nume mapa" - intra in mapa cu "nume mapa"
+dir - afiseaza continutul mapei
+d: - trci la discul "d"
+
+c:\c>gcc hello.c -o hello.exe - comanda spre compilare
+Dupa compilare cheama programa: hello.exe
+
+c:\c>gcc --help - afiseaza parametrii de lucru cu cmd
+
+dir /b - arata tot ce este in mapa fara diferite detalii
+F7 - deschide lista cu fisiere din mapa
