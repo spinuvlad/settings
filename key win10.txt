@@ -1,0 +1,11 @@
+win + spaces			schimba limba
+win + "numar"   - numar de ordine a aplicatiei in navbar
+win + E       se deschide explorer
+ctrl + N 			se cloneaza fereastra
+ctrl + scroll 		mareste/micsoreaza icon pe dascktop
+win + s      search
+alt + enter		info despre fisier
+win + ->			afisarea proportionala a feresterolor
+win + tab 		vezi toate ferestrele deschise (+poti adauga mai multe desktopuri)
+ctrl + win + D  creaza un descktop virtual
+ctrl + win + ->  trece de la un descktop virtual la altul
