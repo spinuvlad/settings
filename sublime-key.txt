@@ -1,11 +1,12 @@
-click pe cifra -->CTRL + sageata sus/jos va modifica in unita cifra
 
 clik pe cuvant + ctrl+d - selecteaza odata toate cuvintele
 ctrl+shift+d - dubleaza un rand intreg
 ctrl+KB - ascunde si deschide bara cu fisiere si foldere (pt windows)
+F11 - full screen
+Alt + Shift + 1 - o coloana
+Alt + Shift + 2 - 2 coloane
 
 F11  -- full screen
 CTRL + SHIFT + P  -->Install Packa
 CTRL + K + O 		deschide gist-urile
 alt+shift+f    --- aranjare cod
-
