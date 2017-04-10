@@ -10,3 +10,9 @@ F11  -- full screen
 CTRL + SHIFT + P  -->Install Packa
 CTRL + K + O 		deschide gist-urile
 alt+shift+f    --- aranjare cod
+
+
+CTRL+SHIFT+G - imbraca codul selectat in tagul dorit
+
+http://eax.me/sublime-text/
+http://sublimetext.ru/documentation/hotkeys/windows

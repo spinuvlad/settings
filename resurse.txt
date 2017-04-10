@@ -4,9 +4,14 @@ de pe site copie blocul de cod pt font --> paste in fonts.css
 
 simboluri HTML:
 http://www.sabinanore.com/design/html-special-symbols/
+http://htmlarrows.com/symbols/
 
 images:
 random images: http://lorempixel.com/
+
+
+trasnformarea codului min in standart si invers
+http://unminify.com/
 
 carousel:
 http://owlgraphic.com/owlcarousel/
@@ -46,3 +51,40 @@ http://koala-app.com/
 info less:
 https://mrmlnc.gitbooks.io/less-guidebook-for-beginners/content/chapter_4/homework.html
 http://theory.phphtml.net/books/css/osnovy-raboty-s-yazykom-less-dlya-novichkov.html
+
+
+
+
+
+psd:
+avocode.com
+zeplin: https://habrahabr.ru/company/uteam/blog/315542/
+
+svg logo icon: 
+http://svgporn.com/
+
+analog lorem ipsum:
+http://www.dummytextgenerator.com/
+randome name generator:
+https://www.behindthename.com/random/
+http://random-name-generator.info/
+
+logo generator:
+https://www.hipsterlogogenerator.com/
+
+compresor de imagini:
+http://compressjpeg.com/
+
+forme de animatii pentru menu:
+http://easings.net/
+
+background fon site
+https://www.toptal.com/designers/subtlepatterns/
+
+creare de prorie documentatie:
+http://revaxarts-themes.com/documenter/
+
+
+
+
+

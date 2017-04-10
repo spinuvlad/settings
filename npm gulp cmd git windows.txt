@@ -34,4 +34,4 @@ Dupa compilare cheama programa: hello.exe
 c:\c>gcc --help - afiseaza parametrii de lucru cu cmd
 
 dir /b - arata tot ce este in mapa fara diferite detalii
-F7 - deschide lista cu fisiere din mapa
+F7 - deschide comenzile executate in CMD
