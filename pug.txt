@@ -1,0 +1,77 @@
+install pug:
+npm install pug
+sau
+npm install pug-cli -g
+
+create file index.pug
+
+compyle:
+pug -w index.pug (va crea fisierul compilat index.html minificat si va urmari orice schimbare)
+pug -w *.pug (compilare si urmarie a tuturor fisierelor *.pug)
+
+pug --pretty index.pug (nu minifica fisierul index.html; nu urmareste)
+
+Mod de lucru:
+im mapa cu proiect avem index.html + index.pug + mapa modules
+in mapa modules se vor afla fisierele module care se vor repeta pe diferite pagini *.png (header, footer, menu, slider button etc)
+
+INCLUDE
+Conectare modul la index.pug:
+in index.pug se scrie: include modules/menu
+in start.png se afla shablonul standart al paginii
+
+EXDENDS
+extends layout/start
+
+block title
+	| Hello
+
+block content
+	h1 Hello
+	p Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+MIXIN
+mixin news(title)
+	span.news-title= title
+	.news-text
+		if block
+			block
+		else
+			p Nu exista text
+
+
++news('Noutate fara text')
+
++nwes('Noutate cu text')
+	p Test text
+-------------------
+mixin link(href,name)
+	a(href= href)= name
+
+
++link('google.com', 'Google')
+------------------
+mixin ulist(...items)
+	ul
+		each item in items
+			li= item
+
+
++ulist('Home', 'News', 'Other')
+------------------
+mixin social(...items)
+	ul
+		each item in items
+			li(class="social-link__" +item)= item
+
+
++social('vk', 'od','tw')
+------------------
+mixin social(ulclass,...items)
+	ul(class="" +ulclass)
+		each item in items
+			li(class="social-link social-link__" +item)= item
+
+
++social('testulclass','vk', 'od','tw')
+------------------

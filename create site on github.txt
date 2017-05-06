@@ -9,4 +9,4 @@ create site on github:
 	git add .
 	git commit -m "comment"
 	git push origin gh-pages
-4. in setari pe gitgub.com trebuie dat permisiunea la deschiderea de siat
+4. in setari pe gitgub.com trebuie dat permisiunea la deschiderea de sait
