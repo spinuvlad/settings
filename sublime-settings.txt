@@ -1,3 +1,5 @@
+https://www.sublimetext.com/docs/3/linux_repositories.html
+
 1. add package:
 CTRL + ~ in proga Sublime
 www.google.com --> package control sublime text 3 --> primul link --> copy text --> paste in prog. 
