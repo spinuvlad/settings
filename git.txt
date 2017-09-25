@@ -1,4 +1,4 @@
-Первоначальные настройки.  git config ­­global user.name "Your Name"  git config ­­global user.email "your_email@whatever.com"    git config ­­global core.autocrlf true  git config ­­global core.safecrlf true 
+Первоначальные настройки.  git config ­­--global user.name "Your Name"  git config ­­--global user.email "your_email@whatever.com"    git config ­­global core.autocrlf true  git config ­­global core.safecrlf true 
 
 Запуск репозитория  git init ­ совдаём новый  git clone [url || name] [new folder name] ­ копируем уже существующий
 
