@@ -33,8 +33,8 @@
   		 git config --list (verifica configurarile)
 
 3. download/install nodejs
-
-npm i or npm up
-gulp watch
+npm install gulp -g
+on project:	npm up
+						gulp watch
 
 4. clone and install ahk: https://github.com/spinuvlad/ahk.git
