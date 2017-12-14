@@ -26,6 +26,7 @@
 			---gaseste clasa data in html in css sau sass, click dreapta pe class in html si alege "Go to css declaration" 											
 			--> combinatia de taste poate fi observata in Preferance -->Package Settings  -->Goto  -->Key - Default:  "super=tasta windows"
 
+	1.7 View --> Layout --> Columns 2
 2. download/install git
 	2.1. git config --global user.name "Name Family"
   		 git config --global user.email "my_email@domain.com"
