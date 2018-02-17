@@ -1,0 +1,24 @@
+F7 - layout
+F - full screen / esc full screan
+CTRL + R - lineika
+Space + cursor - misti maketul cu mausul
+Tab - ascunde toate instrumentele
+Alt + Scrol - maresti si apropii documentul
+Pune bifa: "Auto-select"
+Alt + Click pe sloi - ramane vizibil doar acel sloi
+Ctrl + H - adauga / scoate setka
+
+Masurarea elementelor:
+"Marquee Tool", daca nu nimeresti tie apasat "Space"
+sau: Instrumentul "rigla" > selecteaza elem + Shift
+
+Salvarea imaginilor:
+Cu instrumentul "selectare" alege imaginea > Ctrl Shift C > Ctrl +N >
+>"Magic Erase Tool"(click dreapta pe lastic)
+"Crop Tool" cadreaza ideal imaginea
+>File > Save for Web > Alege format Png-24
+
+Metoda 2 cea mai usoara:
+Gaseste imaginea in sloiuri >
+>Clock dreapta > Conver to Smart Object > Dublu click pe sloi > 
+>File > Save for Web > Alege format Png-24

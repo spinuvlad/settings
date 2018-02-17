@@ -1,0 +1,17 @@
+CTRL + Space - propune diferite variante in cod
+CTRL + E - pe tag inhtml arata cod css care a fost folosit
+				 - in css schimbi culoarea cu acest instrument
+				 - crivaie bezie dinanimatie se afiseaza
+
+ctrl + k - propune o documentatie scurta html si css
+
+Teme: lion, Monokai Dark Soda, zamiere dark
+Alege in pachet de "icon"
+
+Plugins:
+Overscroll 
+Special html characters - Se activeaza la "ALT + C"
+Brackets Css Color Preview - Alege "Enabled Css Color Preview" din "Вид"
+Emmet
+Indent Guides - Alege "Indent Guides" din "Вид"
+jsbeautifier - CTRL + Shift + B (aranjeaza codul frumos)
