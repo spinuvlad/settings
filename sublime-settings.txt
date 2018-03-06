@@ -76,6 +76,12 @@ Combinatia de taste CTRL + K + O deschide gist-urile noastre salvate
 click dreapta pe class in html si alege "Go to css declaration" 
 --> combinatia de taste poate fi observata in Preferance -->Package Settings  -->Goto  -->Key - Default:  "super=tasta windows"
 
-
-
+9. WebInspector
+10. Git + GitGutter
+11. DocBlockr - comment block - /** + Tab
+12. Trailing Spaces
+13. ZenTabs
+14. SublimeCodeIntel - mergi directla functie
+15. SublimeLinter-jsl 
+16. Terminal - CTRL+Shift+T
  

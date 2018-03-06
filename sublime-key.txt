@@ -10,7 +10,7 @@ F11  -- full screen
 CTRL + SHIFT + P  -->Install Packa
 CTRL + K + O 		deschide gist-urile
 alt+shift+f    --- aranjare cod
-
+Alt + F3 - selecteaza cuvant + combinatia - va selesta toate cuvintele din doc
 
 CTRL+SHIFT+G - imbraca codul selectat in tagul dorit
 

@@ -1,0 +1,20 @@
+install package:
+  Beautify
+  HTMLHint
+  JS-CSS-HTML Formatter
+  Sass
+
+key:
+CTRL + { - tab left
+CTRL + } - tab rigth
+CTRL + T - gasesti element in proiect
+CTRL + ~ - open/close terminal
+
+CTRL + B - afiseaza/ascunde harta proectului
+ALT + Z - word wrap/nowrap
+F12 - duce la declararea variabilei
+
+
+
+
+
