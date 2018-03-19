@@ -1,7 +1,6 @@
 install package:
   Beautify
   HTMLHint
-  JS-CSS-HTML Formatter
   Sass
 
 key:
@@ -10,10 +9,15 @@ CTRL + } - tab rigth
 CTRL + T - gasesti element in proiect
 CTRL + ~ - open/close terminal
 
+F1 > Beautify - aranjeaza codul frumos
 CTRL + B - afiseaza/ascunde harta proectului
 ALT + Z - word wrap/nowrap
 F12 - duce la declararea variabilei
 
+Alt - afiseaza/ascunde meniu
+Ctrl+P - treci la fisierul
+Ctrl+Shift+E - project folder
+Ctrl+Shift+X - extension
 
 
 
