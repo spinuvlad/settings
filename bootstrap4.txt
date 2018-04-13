@@ -1,0 +1,42 @@
+.container
+	.row
+		.col //se adapteaza automat
+		.col
+		.col
+			.row
+				.col
+
+	.row
+		.col //se adapteaza
+		.col-6 //pastreaza strict 6 coloane
+		.col
+
+	.row 
+		.col-6 //pentru totate ecranele va ocupa 6 coloane
+		.col-6
+
+	.row
+		.col.col-md-2 //pentru toate ecranele se adapteaza(.col), insa pentru ecranele "md" ocupa 2 coloane 
+		.col-sm-auto - se adapteaza dupa content
+
+	.row.justify-content-sm-center //centreaza .col 
+	.row.justufy-content-/start/center/end/around/between
+	.row.align-items-/start/center/end
+	.col.align-self-/start/center/end
+	.col.order-/1..12/first/last indica pozitia ".col"
+	.col.offset-md-4 //smishenie cu 4 coloane
+
+
+	.row.no-gutters //elimina padding din .col
+
+	.row
+		.col-4.col-sm-8
+		.col
+		.w-100 //analog <br> pentru coloane
+		.col
+		.col
+
+	.row
+		.col-md //ocupa spatiu egal, iar mai mic de "md" se aranjeaza unul sub altul
+		.col-md
+		.col-md

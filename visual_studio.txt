@@ -1,7 +1,9 @@
 install package:
   Beautify
-  HTMLHint
+  colorize
   Sass
+  Surround
+  Gist Extension 1.2.0
 
 key:
 CTRL + { - tab left
