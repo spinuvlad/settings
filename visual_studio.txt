@@ -12,7 +12,7 @@ CTRL + T - gasesti element in proiect
 CTRL + ~ - open/close terminal
 
 F1 > Beautify - aranjeaza codul frumos
-CTRL + B - afiseaza/ascunde harta proectului
+CTRL + B - afiseaza/ascunde EXPLORER
 ALT + Z - word wrap/nowrap
 F12 - duce la declararea variabilei
 
