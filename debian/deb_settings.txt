@@ -1,0 +1,39 @@
+apt install synaptic
+	> intel-microcode
+apt-get update
+apt-get upgrade 
+
+------------------------------------------------------------
+
+copy file "power.sh" to Root/etc/acpi
+
+--------------------- Sublime Text 3 -----------------------
+
+https://www.sublimetext.com/docs/3/linux_repositories.html
+
+-------------------------- chrome --------------------------
+
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+
+apt-get update
+
+apt-get install google-chrome-stable
+
+------------------------- telegram --------------------------
+
+open official site
+
+---------------- Task Manager in Terminal ------------------
+
+su apt-get install htop
+
+htop
+
+---------------- CPU Temperature in Terminal ---------------
+
+su apt-get install lm-sensors
+
+sensors
+
