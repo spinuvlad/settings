@@ -7,6 +7,9 @@ apt-get upgrade
 
 copy file "power.sh" to Root/etc/acpi
 
+apt install curl
+curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+npm install -g gulp
 --------------------- Sublime Text 3 -----------------------
 
 https://www.sublimetext.com/docs/3/linux_repositories.html
