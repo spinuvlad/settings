@@ -1,9 +1,21 @@
-1. install sublime text3
-	1.1. www.google.com --> package control sublime text 3 --> primul link --> copy text 
-	1.2 CTRL + ~ --> paste
-	1.3 restart sublime
+Start Tutorial: https://www.youtube.com/watch?v=Yeh4ilpiWTY&t=0s
 
-	1.4 Preference --> Settings (copy/paste):
+1. Control Panel > Programs and Features > Turn Windows features on or of > Windows Subsystem for Linux > Ok > Restart
+
+2. Install Ubuntu from Microsoft Store
+
+3. Download and Run *.reg file from https://gist.github.com/agragregra/0945725f5b09727bdda77aca51311992
+
+4. Run "Simple" or "Advanced" command in Ubuntu bash from: https://gist.github.com/agragregra/9e5741c53714ed86c7fe96f9a33921ff
+
+5. Config Git:
+		git config --global user.name "Name Family"
+		git config --global user.email "my_email@domain.com"
+		git config --list (verifica configurarile)
+
+1. install sublime text3
+
+	1.1 Preference --> Settings (copy/paste):
 		"margin": 2,
 		"fold_buttons": false,
 		"tab_size": 2,
@@ -11,10 +23,10 @@
 		"line_padding_top": 1,
 		"auto_complete": false,
 
-	1.5 Preference --> Key Bindings [aranjeaza codul frumos] (copy/paste):
+	1.2 Preference --> Key Bindings [aranjeaza codul frumos] (copy/paste):
 		{ "keys": ["alt+shift+f"], "command": "reindent" }, 
 
-	1.6 CTRL + SHIFT + P --> install package
+	1.3 CTRL + SHIFT + P --> install package
 		1.6.1. emmet
 		1.6.2. sass (View --> Syntax --> Open all with... --> sass)
 		1.6.3. jade
@@ -26,11 +38,12 @@
 			---gaseste clasa data in html in css sau sass, click dreapta pe class in html si alege "Go to css declaration" 											
 			--> combinatia de taste poate fi observata in Preferance -->Package Settings  -->Goto  -->Key - Default:  "super=tasta windows"
 
-	1.7 View --> Layout --> Columns 2
-2. download/install git
-	2.1. git config --global user.name "Name Family"
-  		 git config --global user.email "my_email@domain.com"
-  		 git config --list (verifica configurarile)
+	1.4 View --> Layout --> Columns 2
+
+2. install visual studio code
+
+3. download/install git
+	
 
 3. download/install nodejs
 npm install gulp -g
