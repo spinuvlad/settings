@@ -14,7 +14,7 @@ Start Tutorial: https://www.youtube.com/watch?v=Yeh4ilpiWTY&t=0s
 		git config --list (verifica configurarile)
 
 6. install sublime text3
-
+		
 	6.1 Preference --> Settings (copy/paste):
 		"margin": 2,
 		"fold_buttons": false,
@@ -23,22 +23,15 @@ Start Tutorial: https://www.youtube.com/watch?v=Yeh4ilpiWTY&t=0s
 		"line_padding_top": 1,
 		"auto_complete": false,
 
-	6.2 Preference --> Key Bindings [aranjeaza codul frumos] (copy/paste):
-		{ "keys": ["alt+shift+f"], "command": "reindent" }, 
+	6.2 install package:
+		emmet
+		sass (View --> Syntax --> Open all with... --> sass)
+		jade
+		gist
+		BracketHighlighter
+		Color Highlighter
 
-	6.3 CTRL + SHIFT + P --> install package
-		1.6.1. emmet
-		1.6.2. sass (View --> Syntax --> Open all with... --> sass)
-		1.6.3. jade
-		1.6.4. gist
-		1.6.5. BracketHighlighter
-		1.6.6. AutoFileName
-		1.6.7. Color Highlighter
-		1.6.8. Goto-CSS-Declaration   
-			---gaseste clasa data in html in css sau sass, click dreapta pe class in html si alege "Go to css declaration" 											
-			--> combinatia de taste poate fi observata in Preferance -->Package Settings  -->Goto  -->Key - Default:  "super=tasta windows"
-
-	6.4 View --> Layout --> Columns 2
+	6.3 View --> Layout --> Columns 2
 
 7. install visual studio code
 
