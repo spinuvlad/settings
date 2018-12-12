@@ -13,9 +13,9 @@ Start Tutorial: https://www.youtube.com/watch?v=Yeh4ilpiWTY&t=0s
 		git config --global user.email "my_email@domain.com"
 		git config --list (verifica configurarile)
 
-1. install sublime text3
+6. install sublime text3
 
-	1.1 Preference --> Settings (copy/paste):
+	6.1 Preference --> Settings (copy/paste):
 		"margin": 2,
 		"fold_buttons": false,
 		"tab_size": 2,
@@ -23,10 +23,10 @@ Start Tutorial: https://www.youtube.com/watch?v=Yeh4ilpiWTY&t=0s
 		"line_padding_top": 1,
 		"auto_complete": false,
 
-	1.2 Preference --> Key Bindings [aranjeaza codul frumos] (copy/paste):
+	6.2 Preference --> Key Bindings [aranjeaza codul frumos] (copy/paste):
 		{ "keys": ["alt+shift+f"], "command": "reindent" }, 
 
-	1.3 CTRL + SHIFT + P --> install package
+	6.3 CTRL + SHIFT + P --> install package
 		1.6.1. emmet
 		1.6.2. sass (View --> Syntax --> Open all with... --> sass)
 		1.6.3. jade
@@ -38,16 +38,8 @@ Start Tutorial: https://www.youtube.com/watch?v=Yeh4ilpiWTY&t=0s
 			---gaseste clasa data in html in css sau sass, click dreapta pe class in html si alege "Go to css declaration" 											
 			--> combinatia de taste poate fi observata in Preferance -->Package Settings  -->Goto  -->Key - Default:  "super=tasta windows"
 
-	1.4 View --> Layout --> Columns 2
+	6.4 View --> Layout --> Columns 2
 
-2. install visual studio code
+7. install visual studio code
 
-3. download/install git
-	
-
-3. download/install nodejs
-npm install gulp -g
-on project:	npm up
-						gulp watch
-
-4. clone and install ahk: https://github.com/spinuvlad/ahk.git
+8. clone and install ahk: https://github.com/spinuvlad/ahk.git
