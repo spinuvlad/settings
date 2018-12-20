@@ -22,7 +22,7 @@ Ctrl+Shift+E - project folder
 Ctrl+Shift+X - extension
 
 
-File > Preferences > Settings > Workspace Settings > ... > Open settings.json > copy/paste:
+File > Preferences > Settings > User Settings > ... > Open settings.json > copy/paste:
 
 {
     "git.ignoreMissingGitWarning": true,
