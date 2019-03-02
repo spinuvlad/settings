@@ -2,6 +2,7 @@ apt install synaptic
 	> intel-microcode
 apt-get update
 apt-get upgrade 
+sudo apt install snapd
 
 ------------------------------------------------------------
 
@@ -27,7 +28,7 @@ apt-get install google-chrome-stable
 
 ------------------------- telegram --------------------------
 
-open official site
+sudo snap install telegram-desktop
 
 ---------------- Task Manager in Terminal ------------------
 
