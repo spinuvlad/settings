@@ -45,28 +45,25 @@ cd /etc/apache2/sites-available
 touch spinuvlad.conf
 sudo nano spinuvlad.conf
 
+#START
 <VirtualHost *:80>
 ServerName gutarom.spinuvlad.online
 ServerAlias www.gutarom.spinuvlad.online
 DocumentRoot /var/www/html/gutarom
-
 #Logs
 ErrorLog ${APACHE_LOG_DIR}/gutarom/error.log
 CustomLog ${APACHE_LOG_DIR}/gutarom/access.log combined
 </VirtualHost>
-
 ####################
-
 <VirtualHost *:80>
 ServerName dev.spinuvlad.online
 ServerAlias www.dev.spinuvlad.online
 DocumentRoot /var/www/html/dev
-
 #Logs
 ErrorLog ${APACHE_LOG_DIR}/dev/error.log
 CustomLog ${APACHE_LOG_DIR}/dev/access.log combined
 </VirtualHost>
-
+#END
 
 Creaza mape pentru viitoarele erori de site-uri:
 mkdir /var/log/apache2/gutarom
