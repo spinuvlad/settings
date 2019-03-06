@@ -33,11 +33,11 @@ sudo nano /etc/hosts
 Verifica daca lucreaza pingul pe site-urile create:
 ping gutarom.spinuvlad.online
 
-Creaza folder pentru site in /var/www/html:
+Creaza folder pentru site in /var/www:
 sudo mkdir gutarom dev
 Pune fisiere siteului in folder (poti folosi FileZilla sau git)
 Mutarea tuturor fisierelor in alta directorie:
-mv * /var/www/html/folder_name
+mv * /var/www/folder_name
 
 CONECTARE DE SITE-URI:
 Creaza propriul file de configurari pentru conencarea tuturor site-urile:
@@ -49,7 +49,7 @@ sudo nano spinuvlad.conf
 <VirtualHost *:80>
 ServerName gutarom.spinuvlad.online
 ServerAlias www.gutarom.spinuvlad.online
-DocumentRoot /var/www/html/gutarom
+DocumentRoot /var/www/gutarom
 #Logs
 ErrorLog ${APACHE_LOG_DIR}/gutarom/error.log
 CustomLog ${APACHE_LOG_DIR}/gutarom/access.log combined
@@ -58,7 +58,7 @@ CustomLog ${APACHE_LOG_DIR}/gutarom/access.log combined
 <VirtualHost *:80>
 ServerName dev.spinuvlad.online
 ServerAlias www.dev.spinuvlad.online
-DocumentRoot /var/www/html/dev
+DocumentRoot /var/www/dev
 #Logs
 ErrorLog ${APACHE_LOG_DIR}/dev/error.log
 CustomLog ${APACHE_LOG_DIR}/dev/access.log combined
@@ -73,13 +73,21 @@ IMPORTANT: aplicarea tuturor configurarlor:
 cd /etc/apache2/sites-available
 a2ensite spinuvlad.conf
 a2dissite 000-default.conf  -> dezactivare de configurari nedorite
-
+service apache2 restart
 //////////////////////////////////////////////////
 
 
 Hint:
 Mareste durata de sesie ssh pana la 5 ore fara deconectari:
+
 sudo nano /etc/ssh/sshd_config
+
+	copy/paste:
 TCPKeepAlive yes
-ClientAliveInterval 300
-ClientAliveCountMax 30
+ClientAliveInterval 60
+ClientAliveCountMax 360
+
+	linux command:
+service sshd restart
+
+

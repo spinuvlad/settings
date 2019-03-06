@@ -2,8 +2,8 @@ INSTALL GIT:
 1.download git from: https://git-for-windows.github.io/
 
 GIT CONFIG:
-1.git config --global user.name "Name Family"
-  git config --global user.email "my_email@domain.com"
+1.git config --global user.name "Spinu Vladimir"
+  git config --global user.email "spinu.vlad@gmail.com"
 2.verify:
   git config --list
 ----------------------------
