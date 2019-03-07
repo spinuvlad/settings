@@ -13,9 +13,30 @@ touch <file1> <file2> <file3> - LISTA DE FISIERE IN FOLDER
 touch new-file-{1..10}.txt - 10 FISIERE CU DIFERITE NUME
 > new_file.txt - ANALOG CU TOUCH
 echo "<?php echo 'hello dev'; ?>" > index.php - CREAZA INDEX.PHP CU UN OARECARE TEXT
+echo "test de test" > /var/www/dev/test.txt
 cat > index.php - CREAZA INDEX.PHP SI CONTINUI SA-L COMPLETEZI IN CONSOLA. ATENTIE!! PENTRU FISIER EXISTENT, RESCRIE CONTINUTUL
 cal 2019 > calendar.txt - CREAZA FISIER CU CALENDARUL PE 2019
+
 ############ mkdir #############
 CREAZA DIRECTORII
 mkdir folder1
 mkdir -p folder1/folder2/folder3 - CREEAZA TOT SIRUL DE DIRECTORII
+
+############ find ##############
+find . -iname "*.jpg" -o -iname "*.png" -size +100k | xargs -I {} mv {} /куда/переместить
+
+find ./var/www - AFISEAZA CONTINUTUL DIN MAPA "www"
+find ./var/www > ~/text.txt - REZULTATUL VA FI SCRIS IN FISIERUL "text.txt" din MAPA "home"
+find /var/www -name "*.php" - AFIZEAZA TOATE FISIERELE *.PHP DIN MAPA "www"
+find . -iname "*.jpg" - TOATE FISIERELE CU EXTENSIA "*JPG" SAU "*jpg"
+find -name "ind*" - FISIERE VARE INCEP CU 'ind'
+find . -not -name "test*" - FISIERE VARE INCEP CU 'test'
+find . -name "test" -not -name "*.php" - "test" FARA EXTENSIA "*.PHP"
+find ./dev ./gutarom/ -name "ind*" - CAUTA IN MAI MULTE FOLDERE ODATA
+find ./var -size 50M
+find ./var -size +50M -size -100M
+
+*********** find -exec ************
+find ./var/www -name "*php" -exec ls -ld {} \;
+find /tmp -type f -name "*.txt" -exec rm -f {} \; - STERGE FISIERELE TEMPORARE
+find /home/vlad/dir -type f -name *.log -size +10M -exec rm -f {} \; - STERGE FISIERELE MAI MARI DE 100 MB
