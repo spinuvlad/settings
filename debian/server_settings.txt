@@ -75,19 +75,3 @@ a2ensite spinuvlad.conf
 a2dissite 000-default.conf  -> dezactivare de configurari nedorite
 service apache2 restart
 //////////////////////////////////////////////////
-
-
-Hint:
-Mareste durata de sesie ssh pana la 5 ore fara deconectari:
-
-sudo nano /etc/ssh/sshd_config
-
-	copy/paste:
-TCPKeepAlive yes
-ClientAliveInterval 60
-ClientAliveCountMax 360
-
-	linux command:
-service sshd restart
-
-

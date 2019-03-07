@@ -1,0 +1,11 @@
+MARESTE DURATA DE SESIE SSH PANA LA 6 ORE FARA DECONECTARI:
+
+sudo nano /etc/ssh/sshd_config
+
+	COPY/PASTE:
+TCPKeepAlive yes
+ClientAliveInterval 60
+ClientAliveCountMax 360
+
+	LINUX COMMAND:
+service sshd restart

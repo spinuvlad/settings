@@ -1,0 +1,21 @@
+############ remove #############
+PENTRU A STERGE UN APP DE PE SERVER:
+sudo apt-get remove name_of_app
+
+############## cp ###############
+FACE COPIA UNUI FISIER(din dev/index.php in var):
+cp -p /var/www/dev/index.php /var
+
+############ touch, >, echo #############
+CREAZA FISIER (index.php) IN DIRECTORIE EXISTENTA
+touch /var/www/dev/index.php
+touch <file1> <file2> <file3> - LISTA DE FISIERE IN FOLDER
+touch new-file-{1..10}.txt - 10 FISIERE CU DIFERITE NUME
+> new_file.txt - ANALOG CU TOUCH
+echo "<?php echo 'hello dev'; ?>" > index.php - CREAZA INDEX.PHP CU UN OARECARE TEXT
+cat > index.php - CREAZA INDEX.PHP SI CONTINUI SA-L COMPLETEZI IN CONSOLA. ATENTIE!! PENTRU FISIER EXISTENT, RESCRIE CONTINUTUL
+cal 2019 > calendar.txt - CREAZA FISIER CU CALENDARUL PE 2019
+############ mkdir #############
+CREAZA DIRECTORII
+mkdir folder1
+mkdir -p folder1/folder2/folder3 - CREEAZA TOT SIRUL DE DIRECTORII
