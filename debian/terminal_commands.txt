@@ -2,6 +2,13 @@
 PENTRU A STERGE UN APP DE PE SERVER:
 sudo apt-get remove name_of_app
 
+########### free, df ############
+AFISEAZA MEMORIA RAM LA FIECARE 3 SEC (s - SEC, m - MB, g - GB)
+free -sm 5
+
+DISK SPACES:
+df -h
+
 ############## cp ###############
 FACE COPIA UNUI FISIER(din dev/index.php in var):
 cp -p /var/www/dev/index.php /var
