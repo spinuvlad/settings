@@ -15,3 +15,6 @@ Brackets Css Color Preview - Alege "Enabled Css Color Preview" din "Вид"
 Emmet
 Indent Guides - Alege "Indent Guides" din "Вид"
 jsbeautifier - CTRL + Shift + B (aranjeaza codul frumos)
+
+
+test git
