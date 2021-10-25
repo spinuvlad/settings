@@ -17,4 +17,4 @@ Indent Guides - Alege "Indent Guides" din "Вид"
 jsbeautifier - CTRL + Shift + B (aranjeaza codul frumos)
 
 
-
+test test
